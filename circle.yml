@@ -16,11 +16,8 @@ machine:
 
 dependencies:
   override:
-    #- wget -qO- $DX_CLI_URL | tar xJf -  
-    #- ./sfdx/install
-    #- sfdx
-    - npm install -g npm
-    - npm install --global sfdx-cli
+    - wget -qO- $DX_CLI_URL | tar xJf -  
+    - ./sfdx/install
     - mkdir tmp
     - echo 'make hub key'
     - echo $HUB_SERVER_KEY_HEX | xxd -r -ps >> keys/hub.key
